@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :books, only: [:new, :create, :index, :show, :destroy]
+  resources :books, only: [:update, :create, :index, :show, :destroy, :edit]
 
   get 'home/about'=> "homes#about"
 
 
-  resources :users, only:[:create, :index, :show, :destroy]
+  resources :users, only:[:uodate, :index, :show, :edit]
 
 end
