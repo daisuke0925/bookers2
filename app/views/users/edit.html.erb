@@ -1,12 +1,40 @@
+<%= render 'users/info', user:@user %>
+<p id="notice"></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+
 <h2>User info</h2>
 
- <div class="user-name">Name</div>
+<%= form_with model:@user, local:true do |f| %>
+
+ <div class="form-group">
+        <label for="user_name">Name</label>
     <%= f.text_field :name %>
- <div class="user-edit-image">Image</div>
+ </div>
+
+ <div class="form-group">
+        <label for="user_image">Image</label>
     <%= f.attachment_field :profile_image %>
- <div class="form-body">Introduction</div>
+ </div>
+
+ <div class="form-group">
+        <label for="user_introduction">Introduction</label>
     <%= f.text_area :introduction %><br>
+ </div>
+
  <div class="upload">
     <%= f.submit " Update User" %>
  </div>
+
+ </div>
+ </div>
+ </div>
+
+
+
 <% end %>
+
+
+
+
