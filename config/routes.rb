@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'home/about'=> "homes#about"
 
 
-  resources :users, only:[:uodate, :index, :show, :edit]
+  resources :users, only:[:update, :index, :show, :edit, :new]
+
+
 
 end
